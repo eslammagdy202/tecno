@@ -1,0 +1,187 @@
+<div class="container-fluid px-5">
+  <div class="row px-2">
+    <div class="col-lg-12 my-4">
+      <div class="row row-circle  d-flex">
+        <div class="col-lg-4 col-md-6 col-sm-6  ">
+          <div class=" px-2 circle">
+            <apx-chart [series]="chartOptionsTwo.series" [chart]="chartOptionsTwo.chart"
+              [labels]="chartOptionsTwo.labels" [responsive]="chartOptionsTwo.responsive"></apx-chart>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6  ">
+
+          <div class="px-2 circle">
+            <apx-chart [series]="chartOptionsOne.series" [chart]="chartOptionsOne.chart"
+              [labels]="chartOptionsOne.labels" [responsive]="chartOptionsOne.responsive"></apx-chart>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-md-6 col-sm-6 ">
+          <div class="px-2 circle">
+            <apx-chart [series]="chartOptionsThree.series" [chart]="chartOptionsThree.chart"
+              [labels]="chartOptionsThree.labels" [responsive]="chartOptionsThree.responsive"></apx-chart>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-lg-12 my-4">
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="circle" id="chartBar1">
+            <apx-chart [series]="chartOptionsBar1.series" [chart]="chartOptionsBar1.chart"
+              [yaxis]="chartOptionsBar1.yaxis" [xaxis]="chartOptionsBar1.xaxis" [labels]="chartOptionsBar1.labels"
+              [stroke]="chartOptionsBar1.stroke" [title]="chartOptionsBar1.title"
+              [dataLabels]="chartOptionsBar1.dataLabels" [fill]="chartOptionsBar1.fill"
+              [tooltip]="chartOptionsBar1.tooltip"></apx-chart>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="circle" id="chart">
+            <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+              [stroke]="chartOptions.stroke" [dataLabels]="chartOptions.dataLabels" [yaxis]="chartOptions.yaxis"
+              [labels]="chartOptions.labels" [legend]="chartOptions.legend" [title]="chartOptions.title"
+              [subtitle]="chartOptions.subtitle"></apx-chart>
+          </div>
+
+        </div>
+
+        <div class="col-lg-4">
+          <div class="circle" id="chartBar2">
+            <apx-chart [series]="chartOptionsBar2.series" [chart]="chartOptionsBar2.chart"
+              [yaxis]="chartOptionsBar2.yaxis" [xaxis]="chartOptionsBar2.xaxis" [labels]="chartOptionsBar2.labels"
+              [stroke]="chartOptionsBar2.stroke" [title]="chartOptionsBar2.title"
+              [dataLabels]="chartOptionsBar2.dataLabels" [fill]="chartOptionsBar2.fill"
+              [tooltip]="chartOptionsBar2.tooltip"></apx-chart>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+</div>
+
+
+<div class="container h-100">
+
+
+
+  <table class="table table-bordered   ">
+    <thead class=" w-100 text-white thead ">
+      <tr class="">
+        <td class=" text-center"> work Flow </td>
+        <td colspan="4" class=" text-center">process</td>
+
+      </tr>
+    </thead>
+    <tbody class="tbody">
+
+      <tr class="">
+
+        <td class=" d-flex justify-content-center align-items-center ">
+         
+           <h6> IntelView</h6>
+        
+        
+        </td>
+
+        <td>
+          <div class="positionRelative">
+            <div class="divtd1">
+              <div  [ngClass]="{'bg-success': btnTwoBoolean== true || btnThreeBoolean == true || btnFourBoolean == true}"> 
+                <h6 class="py-1 px-0"> Hr </h6>
+                <p >{{ btnTwoBoolean == true || btnThreeBoolean == true || btnFourBoolean == true ? 'Done' : ' Waiting' }}
+                </p>
+               
+                <button class="btn btn-outline-primary px-2" (click)="btnEvent()" >Btn</button>
+              </div>
+             
+              <a data-bs-toggle="collapse" data-bs-target="#collapseExample1" aria-expanded="false"
+                aria-controls="collapseExample1"><i class="fas fa-ellipsis-v"></i>
+              </a>
+            </div>
+            <div class="collapse collapsePosition" id="collapseExample1">
+              <div class="card card-body p-1">
+                <button class="btn btn-danger"> Details </button>
+              </div>
+            </div>
+          </div>
+        </td>
+
+
+        <td>
+          <div class="positionRelative">
+            <div class="divtd2">
+              <div [ngClass]="{'ahmed': btnTwoBoolean == true}" 
+              [ngClass]="{'bg-success':  btnThreeBoolean == true || btnFourBoolean == true}"
+              >
+              <h6 class="py-1 px-0"> intelView </h6>
+              <p >{{ btnTwoBoolean == true ? 'inprogress' : '' }}</p>
+              <p >{{  btnThreeBoolean == true || btnFourBoolean == true ? 'Done' : ' ' }}
+                <br>
+              <button class="btn btn-outline-primary px-2" (click)="btnEventTwo()">Btn</button>
+              </div>
+              <a data-bs-toggle="collapse" data-bs-target="#collapseExample2" aria-expanded="false"
+                aria-controls="collapseExample2"><i class="fas fa-ellipsis-v"></i>
+              </a>
+            </div>
+            <div class="collapse collapsePosition" id="collapseExample2">
+              <div class="card card-body p-1">
+                <button class="btn btn-danger"> Details </button>
+              </div>
+            </div>
+          </div>
+        </td>
+
+
+        <td>
+          <div class="positionRelative">
+            <div class="divtd3">
+              <div [ngClass]="{'ahmed': btnThreeBoolean == true} "  
+              [ngClass]="{'bg-success': btnFourBoolean == true}">
+              <h6 class="py-1 px-0"> Tech </h6>
+              <p> {{btnFourBoolean == true  ? 'Done' : ' Waiting'}}</p>
+              <button class="btn btn-outline-primary px-2" (click)="btnEventThree()" >Btn</button>
+              </div>
+              <a data-bs-toggle="collapse" data-bs-target="#collapseExample3" aria-expanded="false"
+                aria-controls="collapseExample3"><i class="fas fa-ellipsis-v"></i>
+              </a>
+            </div>
+            <div class="collapse collapsePosition" id="collapseExample3">
+              <div class="card card-body p-1">
+                <button class="btn btn-danger"> Details </button>
+          
+              </div>
+            </div>
+          </div>
+        </td>
+
+        <td>
+          <div class="positionRelative">
+            <div class="divtd4">
+              <div [ngClass]="{'ahmed': btnFourBoolean == true} ">
+              <h6 class="py-1 px-0"> Acept </h6>
+              <p></p>
+              </div>
+              <a data-bs-toggle="collapse" data-bs-target="#collapseExample4" aria-expanded="false"
+                aria-controls="collapseExample4"><i class="fas fa-ellipsis-v"></i>
+              </a>
+            </div>
+            <div class="collapse collapsePosition" id="collapseExample4">
+              <div class="card card-body p-1">
+                <button class="btn btn-danger"> Details </button>
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

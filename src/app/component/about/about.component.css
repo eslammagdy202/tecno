@@ -1,0 +1,32 @@
+.circle{
+    transition: all 0.3s ease;
+    transform: scale(1);
+    width:auto !important;
+    height: auto !important;
+    padding-top: 30px !important;
+  }
+
+
+
+
+
+  .circle:hover{
+    transform:scale(1.1);
+  
+    background-color: #eaeaeb;
+    box-shadow: 3px 4px  18px #d8d7db;
+  }
+  
+  .circle2{
+    transition: all 0.3s ease;
+    transform: scale(1);
+    width:auto !important;
+    height: 400px !important;
+    padding-top: 30px !important;
+  }
+  .circle2:hover{
+    transform:scale(1.1);
+  
+    background-color: #eaeaeb;
+    box-shadow: 3px 4px  18px #d8d7db;
+  }
