@@ -1,0 +1,126 @@
+
+#chart {
+    max-width: 650px;
+    margin: 35px auto;
+  }
+  #chartBar1 {
+    max-width: 650px;
+    margin: 35px auto;
+  }
+  #chartBar2 {
+    max-width: 650px;
+    margin: 35px auto;
+  }
+
+ 
+ 
+  .circle{
+    transition: all 0.3s ease;
+    transform: scale(1);
+  }
+
+
+
+
+
+  .circle:hover{
+    transform:scale(1.1);
+  
+    background-color: #eaeaeb;
+    box-shadow: 3px 4px  18px #d8d7db;
+  }
+  
+
+
+
+.table .thead tr td{ 
+  background-color: #042331;
+  font-size: 16px ;
+  font-weight:500;
+  padding: 10px 0 !important;
+  
+ 
+}
+
+
+tbody{
+  font-size: 14px;
+
+}
+
+
+
+
+
+
+.divtd1{
+  
+ text-align: center;
+ 
+
+}
+.divtd2{
+
+
+ text-align: center;
+ 
+}
+.divtd3{
+  
+ text-align: center;
+ 
+}
+.divtd4{
+ 
+ text-align: center;
+}
+.positionRelative{
+  position: relative;
+
+}
+.collapsePosition
+{
+  position:absolute;
+  top: 30px;
+  right: 20px;
+}
+
+
+i{
+  width: 15px;
+ 
+ 
+ 
+ 
+}
+
+a{
+position: absolute;
+top: 0;
+right:1px;
+cursor:pointer;
+}
+
+.test{
+  background-color: rgb(231, 231, 231);
+  width: auto;
+  border: 1px solid;
+  padding: 10px 0;
+}
+.ahmed{
+  background-color: #093447;
+}
+.active{
+  background-color: #093447 ;
+  width: auto;
+  border: 1px solid;
+  padding: 10px 0;
+  color: white;
+}
+
+.wait{
+  background-color: rgb(219, 106, 106);
+  width: auto;
+  border: 1px solid;
+  padding: 10px 0;
+}
